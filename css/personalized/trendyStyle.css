@@ -1,0 +1,45 @@
+.noSpace{
+	margin-right: -1%; 
+}
+
+.noSpace2{
+	margin-left: -1%; 
+}
+
+#versaceTrendy, #balenciagaTrendy, #balenciagaForHer,  #chanelForHer, #fendiForHer, #versaceForHer, #balenciagaForHim, #fendiForHim1, #fendiForHim2, #versaceForHim {
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+}
+
+.titleText{
+    color: black;
+    font-family: 'Noto Sans';
+}
+
+.bodyText{
+    color: black;
+    font-family: 'Noto Sans';
+    font-size: 1 rem;
+}
+
+@media screen  and (max-width: 640px) {
+.phoneAlignment2{
+    flex-direction: column;
+    margin: 2%;
+    padding: 2%;
+}
+
+.noSpace{
+	margin-right: -10%; 
+}
+
+.noSpace2{
+	margin-left: 0.2%; 
+}
+
+.text-item-phone{
+    padding-bottom: 5%;
+}
+
+}

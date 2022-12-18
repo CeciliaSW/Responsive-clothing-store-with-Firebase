@@ -1,0 +1,77 @@
+.btn-full4{
+	width: 30%;
+	border-color: #231f20;
+	background-color: #f2f1f1;
+	color: black;
+	padding: 8px 13px;
+	font-family: 'Teko', sans-serif;
+	font-size: 1.1rem;
+	cursor: pointer;
+	text-align: center;  
+}
+
+.btn-full4:hover {
+	background-color: #231f20;
+	color: white; 
+}
+
+.wishCentering {
+	padding-top: 4.5%;
+}
+
+.wish-text{
+	font-family: 'Teko', sans-serif;
+	font-size: 1.5rem;
+}
+
+.wish-img{
+	padding: 2%;
+	width: 100%;
+}
+
+.item-text{
+	text-align: center;
+}
+
+.title-text{
+	font-size: 2rem;
+}
+
+#validaSesion{
+	margin: auto;
+	padding: 5%;
+	width: 50%;
+}
+
+@media screen  and (max-width: 820px) {
+	.wishCentering {
+		padding-top: 12%;
+	}
+
+	.felizNavidad {
+		font-size: xx-large;
+	}
+
+	.bodyText{
+		color: black;
+		font-family: 'Butler', sans-serif;
+		font-size: xx-large;
+	}
+}
+
+@media screen  and (max-width: 640px) {
+	.wishCentering {
+		padding-top: 25%;
+	}
+
+	.felizNavidad {
+		font-size: medium;
+	}
+
+	.bodyText{
+		color: black;
+		font-family: 'Butler', sans-serif;
+		font-size: larger;
+	}
+}
+

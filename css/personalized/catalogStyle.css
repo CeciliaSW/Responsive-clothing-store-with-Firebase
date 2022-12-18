@@ -1,0 +1,87 @@
+.overlay2 {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    display: none;
+    color: #FFF;
+}
+@media screen  and (max-width: 800px) {
+    .catalogo .card{
+        width: auto;
+        height: 700px;
+
+        
+    }
+    .catalogo .card-img-top{
+        width: auto;
+        height: 100%;
+    }
+    .card-title-M{
+        font-size: x-large;
+    }
+
+}
+@media screen  and (max-width: 768px) {
+    .catalogo .card{
+        width: auto;
+        height: 500px;
+        margin: auto;
+
+        
+    }
+    .catalogo .card-img-top{
+        width: 100%;
+        height: 80%;
+    }
+    .catalogo .card-body .card-title{
+        font-size:x-large;
+    }
+    .card .card-body .card-title{
+        font-size:x-large;
+    }
+    .card-body{
+        height: 100px;
+    }
+
+    .card-group .card-body .card-title{
+        font-size:large
+    }
+    .card-group .card-body .card-text{
+        font-size:small
+    }
+
+}
+
+
+@media screen  and (max-width: 575px) {
+    .catalogo .card{
+        width: auto;
+        height: 500px;
+        margin: 20px;
+
+        
+    }
+    .catalogo .card-img-top{
+        width: 100%;
+        height: 80%;
+    }
+    .catalogo .card-body .card-title{
+        font-size:x-large;
+    }
+    .card .card-body .card-title{
+        font-size:x-large;
+    }
+    .card-body{
+        height: 100px;
+    }
+
+    .card-group .card-body .card-title{
+        font-size:smaller;
+    }
+
+}
+

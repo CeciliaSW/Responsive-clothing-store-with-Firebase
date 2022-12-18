@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rêluxe</title>
+    <link rel="icon" type="image/x-icon" href="../img/navbarResources/Logo.svg">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- PERSONALIZED CSS -->
+    <link rel="stylesheet" href="../css/personalized/catalogStyle.css">
+    <link rel="stylesheet" href="../css/personalized/indexStyle.css">
+    <link rel="stylesheet" href="../css/personalized/loginStyle.css">
+    <link rel="stylesheet" href="../css/personalized/overlay.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <img src="../img/navbarResources/Logo.jpeg" width="80" height="50"
+                    class="d-none d-lg-block d-inline-block align-top">
+                <a class="navbar-brand order-sm-1 order-md-1 logoText logoTxtMedia" href="index.html">
+                    Rêluxe
+                </a>
+
+                <div class="order-sm-3 order-md-1 order-lg-3">
+                    <i onclick="showSearch(this)" class="bi bi-search" id="searchNav" style=" padding: 10px;"></i>
+                    <div id="search-id" class="overlay container-fluid text-center"
+                        style="background-color: #ffff; padding: 2%; width: 20%; ">
+                        <p class="close-btn" style="text-align: start !important;" onclick="closeBtnSearch()">X</p>
+
+                        <div class="input-group rounded" style="padding-bottom: 10%;">
+                            <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="Tendencias">
+                                </option>
+                                <option value="Catálogo de mujer">
+                                </option>
+                                <option value="Accesorios de mujer">
+                                </option>
+                                <option value="Bolsas de mujer">
+                                </option>
+                                <option value="Prendas de mujer">
+                                </option>
+                                <option value="Zapatos de mujer">
+                                </option>
+                                <option value="Catálogo de hombre">
+                                </option>
+                                <option value="Accesorios de hombre">
+                                </option>
+                                <option value="Bolsas de hombre">
+                                </option>
+                                <option value="Prendas de hombre">
+                                </option>
+                                <option value="Zapatos de hombre">
+                                </option>
+                            </datalist>
+                            <span class="input-group-text border-0" id="search-addon">
+                                <i class="bi bi-search"></i>
+                            </span>
+                        </div>
+
+                        <div class="col">
+                            <h5>Sugerido</h5>
+                            <a class="nav-link item-text" href="catalogF.html">Catálogo</a>
+                            <a class="nav-link item-text" href="accesoriesF.html">Accesorios</a>
+                            <a class="nav-link item-text" href="bagsF.html">Bolsos</a>
+                            <a class="nav-link item-text" href="clothesF.html">Prendas</a>
+                            <a class="nav-link item-text" href="shoesF.html">Zapatos</a>
+                        </div>
+                    </div>
+                    <a onmouseover="showCart(this)" href="wishlist.html" style="color: black"><i class="bi bi-basket3"
+                            style="padding: 10px;"></i></a>
+                    <div id="products-id" class="overlay container-fluid text-center"
+                        style="background-color: #f2f1f1; padding: 2%; width: 20%; ">
+                        <p class="close-btn" style="text-align: start !important;" onclick="closeBtn()">X</p>
+                        <h2 style="color: black; font-size: 2rem;">LISTA DE DESEOS</h2>
+                        <div id="miniWishListContainer">
+                            <p class="item-text">Ver lista de deseos.</p>
+                            <input type="button" class="btn-full3" id="loginRedirection" style="margin-bottom: 2%;" onclick= "location.href='wishlist.html'" value="VISUALIZAR"> 
+                            <!-- <ul id="listMini" class="list-group list-group-flush">
+
+                            </ul> -->
+                        </div>
+                    </div>
+                    <a id="login" href="register.html" style="color: black"><i class="bi bi-person" style="padding: 10px;"></i></a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse order-sm-1" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link item-text dropdown-toggle" href="catalogM.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Mujer
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="catalogF.html">Catálogo</a></li>
+                                <li><a class="dropdown-item" href="accesoriesF.html">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="bagsF.html">Bolsos</a></li>
+                                <li><a class="dropdown-item" href="clothesF.html">Prendas</a></li>
+                                <li><a class="dropdown-item" href="shoesF.html">Zapatos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link item-text dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Hombre
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="catalogM.html">Catálogo</a></li>
+                                <li><a class="dropdown-item" href="accesoriesM.html">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="bagsM.html">Bolsos</a></li>
+                                <li><a class="dropdown-item" href="clothesM.html">Prendas</a></li>
+                                <li><a class="dropdown-item" href="shoesM.html">Zapatos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link item-text" href="trendy.html">Tendencia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="catalogo">
+            <br>
+            <br>
+            <div class="row row-cols-1  row-cols-lg-4 g-4 row-cols-md-2 g-4 row-cols-sm-2 g-4" id="accesoriosF">
+                
+            </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+    </body>
+
+    <div class="modal fade" id="productModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close position-absolute top-1 start-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row containerPhone" id="detailProductContainer">
+                    <div class="col">
+                        <img src="../img/provisional/provisionalProduct.jpg" class="card-img-top img-fluid"
+                            style="padding-left: 10%;" width="100%" id="productImage">
+                    </div>
+                    <div class="col">
+                        <h3 class="descriptionText" id="productTitle"></h3>
+                        <span class="badge">RUNWAY</span>
+                        <h5 class="descriptionText" id="productPrice"></h5>
+                        <h6 class="descriptionText2" style="padding-bottom: 4%;">Impuestos y envíos
+                            dependen del comerciante</h6>
+                        <span class="descriptionText3" style="padding-right: 1%;">COLOR:</span>
+                        <span class="descriptionText4" id="productColor"></span>
+                        <h6></h6>
+                        <span class="dot" style="background-color: #FFFF;" id="productColorDot"></span>
+                        <br>
+                        <div id="heart1" class="heart-like-button"></div>
+                        <p>
+                            <button style="margin-top: 6%;" class="btn btn-full6" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"
+                                aria-expanded="false" aria-controls="multiCollapseExample1">
+                                Detalles
+                                <span class="bi bi-chevron-down iconToggle3"></span>
+                            </button>
+                        </p>
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body bodyToggle" style="font-size: 0.8rem;" id="productDescription">
+                            </div>
+                        </div>
+                        <p>
+                            <button class="btn btn-full6" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">
+                                Tamaño
+                                <span class="bi bi-chevron-down iconToggle"></span>
+                            </button>
+                        </p>
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body bodyToggle" style="font-size: 0.8rem;">
+                                Todas las tallas se corresponden con las medidas italianas.
+                            </div>
+                        </div>
+                        <p>
+                            <button class="btn btn-full7" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#multiCollapseExample3" aria-expanded="false"
+                                aria-controls="multiCollapseExample3">
+                                Envíos
+                                <span class="bi bi-chevron-down iconToggle2"></span>
+                            </button>
+                        </p>
+                        <div class="collapse multi-collapse" id="multiCollapseExample3">
+                            <div class="card card-body bodyToggle" style="font-size: 0.8rem;">
+                                Depende de la marca.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-none d-lg-block d-inline-block">
+        <div class="footer-container">
+            <div class="footer-main mb-col-1">
+                <div class="footer-columna">
+                    <h5><i class="bi-geo-alt footerIconItem"
+                            style="padding-right: 10px; margin-left: -40px;"></i>LOCALIZACIÓN</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#location_and_contact"
+                                class="nav-link p-0 footerTextItem">Buscar lugares</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#location_and_contact"
+                                class="nav-link p-0 footerTextItem">Ubicación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna">
+                    <h5><i class="bi-headset footerIconItem"
+                            style="padding-right: 10px; margin-left: -40px;"></i>SOPORTE
+                    </h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#location_and_contact"
+                                class="nav-link p-0 footerTextItem">Ayuda</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Preguntas
+                                frecuentes</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Autenticidad</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Pedidos y envíos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-columna">
+                    <h5><i class="bi-briefcase footerIconItem"
+                            style="padding-right: 15px; margin-left: -40px;"></i>SOBRE
+                        NOSOTROS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Información</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Empresa</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footerTextItem">Trabaja con
+                                nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid d-none d-lg-block d-inline-block" style="background-color: black;">
+        <div class="container">
+            <div class="row p-2 rowColor">
+                <a id="location_and_contact"></a>
+                <div class="col p-0">
+                    <div class="container-fluid" style="background-color: #f2f1f1;">
+                        <form id="contactDesktopForm" class="container" style="padding: 10%;">
+                            <h2 style="color: black; font-size: 2rem; padding-top: 2%;">CONTÁCTANOS</h2>
+                            <div class="mb-3">
+                                <label for="emailFooterDesktop" class="form-label">Correo electrónico</label>
+                                <span class="requiredMarker" aria-hidden="true">*</span>
+                                <input style="border: none;" type="email" class="form-control" id="emailFooterDesktop"
+                                    placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="textFooterDesktop" class="form-label">Asunto</label>
+                                <span class="requiredMarker" aria-hidden="true">*</span>
+                                <textarea style="border: none;" class="form-control" id="textFooterDesktop" rows="3"
+                                    placeholder="Escribe aquí." required></textarea>
+                            </div>
+                            <input type="submit" class="btn-full" id="submitFooterEscritorio" value="CONFIRMAR">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col p-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190137.80743886853!2d-87.76650607735313!3d41.873428192299734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3522042a559%3A0x7f0473aaae55ad5d!2sVersace!5e0!3m2!1ses-419!2sus!4v1668307387052!5m2!1ses-419!2sus"
+                        width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-copy-redes d-none d-lg-block d-inline-block">
+        <div class="main-copy-redes">
+            <div class="footer-copy footerTextItem text-center text-md-start">
+                &copy;2022, Rêluxe.
+            </div>
+            <div class="footer-redes">
+                <a href="https://www.facebook.com/Balenciaga" style="background-color: black;"><i class="bi-facebook"
+                        style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://www.instagram.com/chanelofficial/?hl=en" style="background-color: black;"><i
+                        class="bi-instagram" style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://twitter.com/Fendi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    style="background-color: black;"><i class="bi-twitter"
+                        style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://www.youtube.com/c/Versace/videos" style="background-color: black;"><i
+                        class="bi-youtube" style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-lg-none">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bi-geo-alt footerIconItem footerTextItemAcc" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                        aria-controls="collapseOne">
+                        <h3 style="padding-top: 10px; margin-left: 10px;">LOCALIZACIÓN</h3>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#location_and_contact2"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Buscar lugares</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#location_and_contact2"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Ubicación</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bi-headset footerIconItem footerTextItemAcc" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        <h3 style="padding-top: 10px; margin-left: 10px;">SOPORTE</h3>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#location_and_contact2"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Ayuda</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Preguntas
+                                    frecuentes</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Autenticidad</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 footerTextItem accordionBodyMargin">Pedidos y envíos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed bi-briefcase footerIconItem footerTextItemAcc"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <h3 style="padding-top: 10px; margin-left: 10px;">SOBRE NOSOTROS</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 footerTextItem accordionBodyMargin">Información</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 footerTextItem accordionBodyMargin">Empresa</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 footerTextItem accordionBodyMargin">Trabaja con
+                                        nosotros</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid d-lg-none" style="background-color: black;">
+        <div class="container">
+            <div class="row p-2 rowColor phoneAlignment">
+                <a id="location_and_contact2"></a>
+                <div class="col p-0">
+                    <div class="container-fluid" style="background-color: #f2f1f1;">
+                        <form id="contactPhoneForm" class="container" style="padding: 10%;">
+                            <h2 style="color: black; font-size: 2rem; padding-top: 2%;">CONTÁCTANOS</h2>
+                            <div class="mb-3">
+                                <label for="emailFooterPhone" class="form-label">Correo electrónico</label>
+                                <span class="requiredMarker" aria-hidden="true">*</span>
+                                <input style="border: none;" type="email" class="form-control" id="emailFooterPhone"
+                                    placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="textFooterPhone" class="form-label">Asunto</label>
+                                <span class="requiredPhone" aria-hidden="true">*</span>
+                                <textarea style="border: none;" class="form-control" id="textFooterPhone" rows="3"
+                                    placeholder="Escribe aquí." required></textarea>
+                            </div>
+                            <input type="submit" class="btn-full" id="submitFooterPhone" value="CONFIRMAR">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col p-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190137.80743886853!2d-87.76650607735313!3d41.873428192299734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3522042a559%3A0x7f0473aaae55ad5d!2sVersace!5e0!3m2!1ses-419!2sus!4v1668307387052!5m2!1ses-419!2sus"
+                        width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy-redes d-lg-none">
+        <div class="main-copy-redes">
+            <div class="footer-copy footerTextItem text-center text-md-start">
+                &copy;2022, Rêluxe.
+            </div>
+            <div class="footer-redes">
+                <a href="https://www.facebook.com/Balenciaga" style="background-color: black;"><i class="bi-facebook"
+                        style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://www.instagram.com/chanelofficial/?hl=en" style="background-color: black;"><i
+                        class="bi-instagram" style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://twitter.com/Fendi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    style="background-color: black;"><i class="bi-twitter"
+                        style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+                <a href="https://www.youtube.com/c/Versace/videos" style="background-color: black;"><i
+                        class="bi-youtube" style="color: #bcbcbc; font-size: 2rem; padding: 10px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/backend/html/accesoriesF.js"></script>
+    <script type="module" src="../js/personalized/overlay.js"></script>
+    <script src="../js/personalized/contact.js"></script>
+    <script src="../js/personalized/favorite.js"></script>
+    <script src="../js/personalized/search.js"></script>
+    <script src="../js/personalized/wishlist.js"></script>
+    
+</body>
+
+</html>

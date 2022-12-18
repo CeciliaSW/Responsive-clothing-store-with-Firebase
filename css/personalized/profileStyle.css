@@ -1,0 +1,51 @@
+.btn-full4{
+	display: block;
+	width: 35%;
+	border-color: #231f20;
+	background-color: #231f20;
+	color: white;
+	padding: 8px 13px;
+	font-family: 'Teko', sans-serif;
+	font-size: 1.1rem;
+	cursor: pointer;
+	text-align: center;  
+}
+
+.btn-full4:hover {
+	background-color: #f2f1f1;
+	color: black; 
+}
+
+.btn-log2{
+	display: block;
+	width: 35%;
+	border-color: #231f20;
+	background-color: #f2f1f1;
+	color: black;
+	padding: 8px 13px;
+	font-family: 'Teko', sans-serif;
+	font-size: 1.1rem;
+	cursor: pointer;
+	text-align: center;  
+}
+
+.btn-log2:hover {
+	background-color: #231f20;
+	color: white; 
+}
+
+.centering{
+	padding-left: 30.5%;
+}
+
+@media screen  and (max-width: 820px) {
+	.container{
+		width: 55% !important;
+	}
+}
+
+@media screen  and (max-width: 640px) {
+	.container{
+		width: 100% !important;
+	}
+}
